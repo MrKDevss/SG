@@ -66,7 +66,14 @@ header {
 .logo {
     width: 180px;
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
+    
+    /* 1. Invert turns the white background black, and the dark shield silver */
+    /* 2. Drop-shadow gives it a nice glow */
+    filter: invert(1) drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+    
+    /* 3. Screen makes the new black background completely invisible! */
+    mix-blend-mode: screen; 
+    
     transition: transform 0.3s ease;
 }
 
